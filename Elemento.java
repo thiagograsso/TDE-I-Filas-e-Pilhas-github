@@ -1,4 +1,4 @@
-// Classe para representar uma solicitação ou cliente
+
 public class Elemento {
     String id;
     String descricao;
