@@ -1,0 +1,10 @@
+REQ001,Instalação de software,2024-08-20 10:30
+REQ002,Manutenção preventiva,2024-08-20 11:00
+REQ003,Atualização de sistema,2024-08-20 11:30
+REQ004,Suporte técnico,2024-08-20 12:00
+REQ005,Troca de equipamento,2024-08-20 12:30
+REQ006,Consulta de garantia,2024-08-20 13:00
+REQ007,Reparo de impressora,2024-08-20 13:30
+REQ008,Configuração de rede,2024-08-20 14:00
+REQ009,Restauração de dados,2024-08-20 14:30
+REQ010,Consulta técnica,2024-08-20 15:00
