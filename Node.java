@@ -1,4 +1,4 @@
-// Classe Node para representar os nós da lista encadeada
+
 public class Node {
     Elemento elemento;
     Node proximo;
