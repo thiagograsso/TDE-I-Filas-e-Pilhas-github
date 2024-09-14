@@ -1,4 +1,3 @@
-
 public class Fila {
     private Node frente;
     private Node tras;
@@ -8,38 +7,43 @@ public class Fila {
         this.tras = null;
     }
 
-    // Adicionar cliente à fila (enqueue)
-    public void enqueue(Elemento elemento) {
-        Node novoNode = new Node(elemento);
-        if (tras != null) {
-            tras.proximo = novoNode;
+    // Método para adicionar um cliente à fila
+    public void enqueue(Elemento cliente) {
+        Node novoNo = new Node(cliente);
+        if (tras == null) {  // Fila vazia
+            frente = tras = novoNo;
+        } else {
+            tras.proximo = novoNo;
+            tras = novoNo;
         }
-        tras = novoNode;
-        if (frente == null) {
-            frente = tras;
-        }
+        System.out.println("Cliente adicionado à fila: " + cliente.descricao);
     }
 
-    // Atender o próximo cliente (dequeue)
+    // Método para remover e atender o próximo cliente da fila
     public Elemento dequeue() {
         if (frente == null) {
-            System.out.println("Fila de atendimento vazia!");
+            System.out.println("A fila está vazia! Nenhum cliente para atender.");
             return null;
         }
-        Elemento atendido = frente.elemento;
+        Elemento clienteAtendido = frente.elemento;
         frente = frente.proximo;
         if (frente == null) {
-            tras = null;
+            tras = null; // A fila ficou vazia
         }
-        return atendido;
+        System.out.println("Cliente atendido com sucesso: " + clienteAtendido.descricao);
+        return clienteAtendido;
     }
 
-    // Mostrar fila de clientes
+    // Método para exibir todos os clientes na fila
     public void mostrarFila() {
-        Node atual = frente;
-        while (atual != null) {
-            System.out.println(atual.elemento);
-            atual = atual.proximo;
+        if (frente == null) {
+            System.out.println("A fila está vazia.");
+        } else {
+            Node atual = frente;
+            while (atual != null) {
+                System.out.println("ID: " + atual.elemento.id + ", Descrição: " + atual.elemento.descricao + ", Info: " + atual.elemento.info);
+                atual = atual.proximo;
+            }
         }
     }
 }
